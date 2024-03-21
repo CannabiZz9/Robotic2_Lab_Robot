@@ -1,0 +1,31 @@
+digraph G {
+"base_link" -> "base_footprint"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "chassis"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "chassissidel"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "drivemotor_fl"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "drivemotor_fr"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "drivemotor_br"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "drivemotor_bl"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "sidebot_l"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "sidebot_r"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "chassissider"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "chassissidef"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "chassissideb"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "sao_fl"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "sao_fr"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "sao_br"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "sao_bl"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "grippermotor"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"arm" -> "palm"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"chassis" -> "arm"[label=" Broadcaster: default_authority\nAverage rate: 10.198\nBuffer length: 5.001\nMost recent transform: 1709488054.42983\nOldest transform: 1709488049.428727\n"];
+"base_link" -> "Front_left_wheel"[label=" Broadcaster: default_authority\nAverage rate: 10.198\nBuffer length: 5.001\nMost recent transform: 1709488054.42983\nOldest transform: 1709488049.428727\n"];
+"base_link" -> "Front_right_wheel"[label=" Broadcaster: default_authority\nAverage rate: 10.198\nBuffer length: 5.001\nMost recent transform: 1709488054.42983\nOldest transform: 1709488049.428727\n"];
+"base_link" -> "Rear_left_wheel"[label=" Broadcaster: default_authority\nAverage rate: 10.198\nBuffer length: 5.001\nMost recent transform: 1709488054.42983\nOldest transform: 1709488049.428727\n"];
+"base_link" -> "Rear_right_wheel"[label=" Broadcaster: default_authority\nAverage rate: 10.198\nBuffer length: 5.001\nMost recent transform: 1709488054.42983\nOldest transform: 1709488049.428727\n"];
+"palm" -> "finger1"[label=" Broadcaster: default_authority\nAverage rate: 10.198\nBuffer length: 5.001\nMost recent transform: 1709488054.42983\nOldest transform: 1709488049.428727\n"];
+"palm" -> "finger2"[label=" Broadcaster: default_authority\nAverage rate: 10.198\nBuffer length: 5.001\nMost recent transform: 1709488054.42983\nOldest transform: 1709488049.428727\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1709488054.455286"[ shape=plaintext ] ;
+}->"base_link";
+}

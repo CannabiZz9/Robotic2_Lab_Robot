@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+<xacro:include filename="inertial_macros.xacro" />
+  
+  <joint name="chassis_to_arm" type="revolute">
+    <parent link="base_link"/>
+    <child link="arm"/>
+    <origin xyz="0.25 0 0.32" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="100" velocity="0.5" lower="-0.35" upper="2.3"/>
+  </joint>
+  
+  <link name="arm">
+    <!-- Palm Visual -->
+    <visual>
+      <origin xyz="0 0 0.1725" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.03 0.03 0.4"/>
+      </geometry>
+    </visual>
+    <!-- Palm Collision -->
+    <collision>
+      <origin xyz="0 0 0.1725" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.03 0.03 0.4"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="arm">
+  	<material>Gazebo/Blue</material>
+  </gazebo>
+  
+  <joint name="arm_to_palm" type="fixed">
+    <parent link="arm"/>
+    <child link="palm"/>
+    <origin xyz="0 0 0.37" rpy="-0.7 0 1.5708"/>
+    
+  </joint>
+  
+  <link name="palm">
+    <!-- Palm Visual -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.1 0.025 0.02"/>
+      </geometry>
+    </visual>
+    <!-- Palm Collision -->
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.1 0.025 0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="palm">
+  	<material>Gazebo/Blue</material>
+  </gazebo>
+
+  <!-- Joint connecting Finger1 to Palm -->
+  <joint name="finger1_to_palm" type="revolute">
+    <parent link="palm"/>
+    <child link="finger1"/>
+    <origin xyz="0.05 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="50" velocity="0.2" lower="-0.6" upper="0.1"/>
+  </joint>
+  
+  <!-- Gripper Finger1 Link -->
+  <link name="finger1">
+    <!-- Finger1 Visual -->
+    <visual>
+      <origin xyz="0.01 0 0.05" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.03 0.02 0.1"/>
+      </geometry>
+    </visual>
+    <!-- Finger1 Collision -->
+    <collision>
+      <origin xyz="0.01 0 0.05" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.03 0.02 0.1"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="finger1">
+  	<material>Gazebo/Blue</material>
+  </gazebo>
+
+  <joint name="finger2_to_palm" type="revolute">
+    <parent link="palm"/>
+    <child link="finger2"/>
+    <origin xyz="-0.05 0 0" rpy="0 0 0"/>
+    <axis xyz="0 -1 0"/>
+    <limit effort="50" velocity="0.2" lower="-0.6" upper="0.1"/>
+  </joint>
+
+  <!-- Gripper Finger2 Link -->
+  <link name="finger2">
+    <!-- Finger2 Visual -->
+    <visual>
+      <origin xyz="-0.01 0 0.05" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.03 0.02 0.1"/>
+      </geometry>
+    </visual>
+    <!-- Finger1 Collision -->
+    <collision>
+      <origin xyz="-0.01 0 0.05" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.03 0.02 0.1"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="finger2">
+  	<material>Gazebo/Blue</material>
+  </gazebo>
+
+
+</robot>
